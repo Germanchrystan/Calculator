@@ -1,0 +1,23 @@
+:root{
+        /*-----THEME 3-----*/
+            /*BACKGROUND*/
+    --theme-main-background: hsl(268, 75%, 9%);
+    --theme-toggle-keypad-background:hsl(268, 71%, 12%);
+    --theme-screen-background: hsl(268, 71%, 12%);
+            /*  KEYS  */
+    --theme-key-background-1:hsl(281, 89%, 26%);
+    --theme-key-shadow-1: hsl(285, 91%, 52%);
+    --theme-toggle-key-background-2:hsl(176, 100%, 44%);
+    --theme-key-shadow-2:hsl(177, 92%, 70%);
+    --theme-key-background-3:hsl(268, 47%, 21%);
+    --theme-key-shadow-3:hsl(290, 70%, 36%);
+            /*  TEXT  */
+    --theme-text-color-1:hsl(52, 100%, 62%);
+    --theme-text-color-2:  hsl(198, 20%, 13%);
+    --theme-text-color-3:hsl(0, 0, 100%);
+        
+}
+
+body{
+    background:var(--theme-main-background);
+}

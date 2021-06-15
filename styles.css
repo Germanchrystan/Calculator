@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: content-box;
+}
 /*------------VARIABLES-----------*/
 :root{
 /*=================================================*/
@@ -55,11 +60,15 @@
     --number-font-size: 32px;
 }           
 
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: white; 
+    background: black;
+}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: content-box;
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
 
 body{
@@ -67,19 +76,31 @@ body{
 }
 
 .border{
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .Calculator{
     border: 2px solid black;
+    height: 93vh;
+    width: 92vw;
+    margin: auto;
+    
 }
 /*------------HEADER-----------*/
 .Calculator__Header{
     display : flex;
+    justify-content: space-between;
 }
 /*------------THEMES-----------*/
 .Calculator__Header--Theme{
     display: flex;
+    border: 2px solid green;
+    padding: 0.5rem;
+    align-items:flex-end;
+    cursor: pointer; 
+}
+.Theme__Title--Paragraph{
+    font-size: 0.5rem;
 }
 
 .Theme__Knob{
@@ -87,8 +108,27 @@ body{
     flex-direction: column;
 }
 
-
-.Theme__Knob ul{
+.Theme__Knob--List{
     display: flex;
     list-style: none;
+    justify-content: space-around;
+}
+
+.Theme__Knob--List--Item{
+    font-size: 0.5rem;
+}
+
+.Theme__Knob--Slot{
+    display: flex;
+    width: 3rem;
+    height: 1rem;
+    transition: justify-content 0.75s;
+    border:2px solid red;
+}
+
+.Theme__Knob--Knob{
+    border-radius:50%;
+    border: 1px solid blue;
+    height: 0.9rem;
+    width: 33%;
 }

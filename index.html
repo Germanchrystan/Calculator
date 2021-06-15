@@ -6,31 +6,33 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  
+  <link id="themeCSS" rel="stylesheet" href="theme1.css">
+
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 
 <body>
-  <div class="Calculator">
+  <div class="Calculator border">
     <div class="Calculator__Header">
       <div class="Calculator__Header--Title">
-        <h4>calc</h4> 
+        <h3>calc</h3> 
       </div>
 
       <div class="Calculator__Header--Theme">
         <div class="Theme__Title">
-          <p>THEME</p>
+          <p class="Theme__Title--Paragraph">THEME</p>
         </div>
-        <div class="Theme__Knob">
-          <ul><li>1</li><li>2</li><li>3</li></ul>
-          <div class="Theme__Knob--Slot"></div>
-          <div class="Theme__Knob--Knob"></div>
+        <div id="themeKnob" class="Theme__Knob">
+          <ul class="Theme__Knob--List">
+            <li class="Theme__Knob--List--Item">1</li>
+            <li class="Theme__Knob--List--Item">2</li>
+            <li class="Theme__Knob--List--Item">3</li>
+          </ul>
+          <div class="Theme__Knob--Slot border" id="themeKnobSlot">
+            <div class="Theme__Knob--Knob"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -50,8 +52,10 @@
 
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <br/> 
+    Coded by <a href="#">Germán Chrystan</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
