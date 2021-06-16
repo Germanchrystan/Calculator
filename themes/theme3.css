@@ -42,7 +42,6 @@ body{
     color: #ffe53d;
 }
 
-
 .DelButton,
 .ResetButton{
     background:var(--theme-key-background-1);
@@ -51,4 +50,9 @@ body{
 
 .EqualsButton{
     background: var(--theme-toggle-key-background-2);
+}
+
+.Calculator__Screen--History,
+.Calculator__Screen--Current{
+    color: var(--theme-text-color-2);
 }

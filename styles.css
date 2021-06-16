@@ -110,6 +110,18 @@ body{
     height: 20vh;
 }
 
+.Calculator__Screen--History,
+.Calculator__Screen--Current{
+    text-align: right;
+    margin: 0.5rem;
+}
+
+.Calculator__Screen--Current{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /*-------------PAD------------*/
 .Calculator__Pad{
     display: flex;
@@ -138,6 +150,7 @@ body{
     border-radius: 5px;
     font-size: 1.5rem;
     max-width: 6rem;
+    cursor: pointer;
 }
 
 .DelButton{

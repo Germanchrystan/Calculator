@@ -51,3 +51,7 @@ body{
 .EqualsButton{
     background: var(--theme-toggle-key-background-2) ;
 }
+.Calculator__Screen--History,
+.Calculator__Screen--Current{
+    color: var(--theme-key-background-3);
+}
