@@ -7,56 +7,6 @@
 }
 /*------------VARIABLES-----------*/
 :root{
-/*=================================================*/
-        /*-----THEME 1-----*/
-            /*BACKGROUND*/
-    --theme1-main-background:hsl(222, 26%, 31%);
-    --theme1-toggle-keypad-background: hsl(223, 31%, 20%);
-    --theme1-screen-background: hsl(224, 36%, 15%);
-            /*  KEYS  */
-    --theme1-key-background-1: hsl(225, 21%, 49%);
-    --theme1-key-shadow-1: hsl(224, 28%, 35%);
-    --theme1-toggle-key-background-2: hsl(6, 63%, 50%);
-    --theme1-key-shadow-2:  hsl(6, 70%, 34%);
-    --theme1-key-background-3:hsl(30, 25%, 89%);
-    --theme1-key-shadow-3: hsl(28, 16%, 65%);
-            /*  TEXT  */
-    --theme1-text-color-1: hsl(221, 14%, 31%);
-    --theme1-text-color-2:hsl(0, 0, 100%);
-/*=================================================*/
-        /*-----THEME 2-----*/
-            /*BACKGROUND*/
-    --theme2-main-background: hsl(0, 0%, 90%);
-    --theme2-toggle-keypad-background:hsl(0, 5%, 81%);
-    --theme2-screen-background:hsl(0, 0%, 93%);
-             /*  KEYS  */
-    --theme2-key-background-1:hsl(185, 42%, 37%);
-    --theme2-key-shadow-1: hsl(185, 58%, 25%);
-    --theme2-toggle-key-background-2:hsl(25, 98%, 40%);
-    --theme2-key-shadow-2:hsl(25, 99%, 27%);
-    --theme2-key-background-3:hsl(45, 7%, 89%);
-    --theme2-key-shadow-3:hsl(35, 11%, 61%);
-            /*  TEXT  */
-    --theme2-text-color-1:hsl(60, 10%, 19%);
-    --theme2-text-color-2:hsl(0, 0, 100%);
-/*=================================================*/
-        /*-----THEME 3-----*/
-            /*BACKGROUND*/
-    --theme3-main-background: hsl(268, 75%, 9%);
-    --theme3-toggle-keypad-background:hsl(268, 71%, 12%);
-    --theme3-screen-background: hsl(268, 71%, 12%);
-            /*  KEYS  */
-    --theme3-key-background-1:hsl(281, 89%, 26%);
-    --theme3-key-shadow-1: hsl(285, 91%, 52%);
-    --theme3-toggle-key-background-2:hsl(176, 100%, 44%);
-    --theme3-key-shadow-2:hsl(177, 92%, 70%);
-    --theme3-key-background-3:hsl(268, 47%, 21%);
-    --theme3-key-shadow-3:hsl(290, 70%, 36%);
-            /*  TEXT  */
-    --theme3-text-color-1:hsl(52, 100%, 62%);
-    --theme3-text-color-2:  hsl(198, 20%, 13%);
-    --theme3-text-color-3:hsl(0, 0, 100%);
-/*=================================================*/
     --number-font-size: 32px;
 }           
 
@@ -64,6 +14,8 @@
     font-size: 11px; 
     text-align: center;
     color: white; 
+    margin-bottom: none;
+    padding: .5rem 0;
     background: black;
 }
 
@@ -80,27 +32,40 @@ body{
 }
 
 .Calculator{
-    border: 2px solid black;
     height: 93vh;
-    width: 92vw;
+    width: 85vw;
     margin: auto;
-    
+    max-width: 500px;    
 }
 /*------------HEADER-----------*/
 .Calculator__Header{
     display : flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+.Calculator__Header--Title h3{
+    padding: 1.2rem 0;
+}
+
 /*------------THEMES-----------*/
 .Calculator__Header--Theme{
     display: flex;
-    border: 2px solid green;
-    padding: 0.5rem;
-    align-items:flex-end;
-    cursor: pointer; 
+    justify-content: flex-end;
+    padding: 0.2rem;
+    padding-right: 0;
+    width: 25vw;
+    max-width: 200px;
+    align-items: flex-end;
 }
+
+#themeKnob{
+    cursor: pointer;
+}
+
 .Theme__Title--Paragraph{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+    padding-right: 0.2rem;
 }
 
 .Theme__Knob{
@@ -120,15 +85,75 @@ body{
 
 .Theme__Knob--Slot{
     display: flex;
+    padding: 0.1rem 0.2rem;
     width: 3rem;
     height: 1rem;
-    transition: justify-content 0.75s;
-    border:2px solid red;
+    align-items:center ;
 }
 
 .Theme__Knob--Knob{
     border-radius:50%;
-    border: 1px solid blue;
-    height: 0.9rem;
-    width: 33%;
+    height: 0.8rem;
+    width: 30%;
+}
+
+
+.Calculator__Content{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*------------SCREEN-----------*/
+.Calculator__Screen{
+    height: 20vh;
+}
+
+/*-------------PAD------------*/
+.Calculator__Pad{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 55vh;
+    margin: auto 0;
+}
+
+/*-----------PAD GRID----------*/
+.Calculator__Pad--Grid{
+    display: grid;
+    height: 48vh;
+    width: 75vw;
+    max-width: 30rem;
+    margin: 1.5rem;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.Button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    max-width: 6rem;
+}
+
+.DelButton{
+    font-size: 1.1rem;
+}
+
+.ResetButton{
+    grid-column: 1 /span 2;
+    text-align: center;
+    max-width: none;
+    font-size: 1.1rem;
+  
+}
+
+.EqualsButton{
+    grid-column: 3/ span 2 ;
+    max-width: none;  
+    font-size: 1.1rem;
 }

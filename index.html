@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  <link id="themeCSS" rel="stylesheet" href="theme1.css">
+  <link id="themeCSS" rel="stylesheet" href="./themes/theme1.css">
 
   <title>Frontend Mentor | Calculator app</title>
 
@@ -37,15 +37,17 @@
       </div>
     </div>
 
-    <div class="Calculator__Screen">
-      <div class="Calculator__Screen--History"><p></p></div>
-      <div class="Calculator__Screen--Current"><h2></h2></div>
-    </div>
-
-    <div class="Calculator__Pad">
-      <div class="Calculator__Pad--Grid"></div>
-
-      <div class="Calculator__Pad--BigButtons"></div>
+    <div class="Calculator__Content">
+      <div class="Calculator__Screen border">
+        <div class="Calculator__Screen--History"><p></p></div>
+        <div class="Calculator__Screen--Current"><h2></h2></div>
+      </div>
+  
+      <div class="Calculator__Pad border">
+        <div class="Calculator__Pad--Grid"></div>
+  
+        <div class="Calculator__Pad--BigButtons"></div>
+      </div>
     </div>
 
   </div>
@@ -55,7 +57,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     <br/> 
     Coded by <a href="#">Germán Chrystan</a>.
+    <br/>
   </div>
-  <script src="script.js"></script>
+  <script src="themeScript.js"></script>
+  <script src="calculatorScript.js"></script>
 </body>
 </html>

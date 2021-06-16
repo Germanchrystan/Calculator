@@ -8,7 +8,7 @@ function changeTheme(){
     if(themeNumber < 3) themeNumber ++
     else themeNumber = 1;
 
-    themedStyleSheet.href =`theme${themeNumber}.css`
+    themedStyleSheet.href =`./themes/theme${themeNumber}.css`
 
     switch(themeNumber){
         case 1: themeKnobSlot.style.justifyContent='flex-start'; break;

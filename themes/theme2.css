@@ -1,0 +1,51 @@
+:root{
+        /*-----THEME 2-----*/
+            /*BACKGROUND*/
+    --theme-main-background: hsl(0, 0%, 90%);
+    --theme-toggle-keypad-background:hsl(0, 5%, 81%);
+    --theme-screen-background:hsl(0, 0%, 93%);
+            /*  KEYS  */
+    --theme-key-background-1:hsl(185, 42%, 37%);
+    --theme-key-shadow-1: hsl(185, 58%, 25%);
+    --theme-toggle-key-background-2:hsl(25, 98%, 40%);
+    --theme-key-shadow-2:hsl(25, 99%, 27%);
+    --theme-key-background-3:hsl(45, 7%, 89%);
+    --theme-key-shadow-3:hsl(35, 11%, 61%);
+            /*  TEXT  */
+    --theme-text-color-1: #ffffff;/*hsl(0, 0, 100%)*/
+    --theme-text-color-2: #35352c;/*hsl(60, 10%, 19%); */
+}
+
+body{
+    background: var(--theme-main-background);
+}
+
+.Calculator__Header--Title h3,
+.Theme__Title--Paragraph,
+.Theme__Knob--List{
+    color: var(--theme-text-color-2);
+}
+
+.Theme__Knob--Slot,
+.Calculator__Pad{
+    background: var(--theme-key-shadow-3);
+}
+
+.Calculator__Screen,
+.RegularButton{
+    background: var(--theme-screen-background);
+}
+
+.Theme__Knob--Knob{
+    background: var(--theme-toggle-key-background-2);
+}
+
+.DelButton,
+.ResetButton{
+    background:var(--theme-key-background-1);
+    color: white;
+}
+
+.EqualsButton{
+    background: var(--theme-toggle-key-background-2);
+}

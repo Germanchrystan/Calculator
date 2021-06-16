@@ -13,11 +13,41 @@
     --theme-key-shadow-3: hsl(28, 16%, 65%);
             /*  TEXT  */
     --theme-text-color-1: hsl(221, 14%, 31%);
-    --theme-text-color-2:hsl(0, 0, 100%);
+    --theme-text-color-2:#ffffff;/*hsl(0, 0, 100%)*/
 }
 
 
 
 body{
     background: var(--theme-main-background);
+}
+
+.Calculator__Header--Title h3,
+.Theme__Title--Paragraph,
+.Theme__Knob--List{
+    color: var(--theme-text-color-2);
+}
+
+.Theme__Knob--Slot,
+.Calculator__Screen,
+.Calculator__Pad{
+    background: var(--theme-screen-background);
+}
+
+.Theme__Knob--Knob{
+    background: var(--theme-toggle-key-background-2);
+}
+
+.RegularButton{
+    background: var(--theme-key-background-3);
+}
+
+.DelButton,
+.ResetButton{
+    background:var(--theme-key-background-1);
+    color: white;
+}
+
+.EqualsButton{
+    background: var(--theme-toggle-key-background-2) ;
 }
