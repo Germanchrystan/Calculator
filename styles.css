@@ -16,6 +16,7 @@
     color: white; 
     margin-bottom: none;
     padding: .5rem 0;
+    line-height: 1.6;
     background: black;
 }
 
@@ -32,6 +33,8 @@ body{
 }
 
 .Calculator{
+    position: relative;
+    z-index: 0;
     height: 93vh;
     width: 85vw;
     margin: auto;
@@ -119,11 +122,14 @@ body{
 .Calculator__Screen--Current{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 /*-------------PAD------------*/
 .Calculator__Pad{
+    position: relative;
+    z-index: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -143,13 +149,19 @@ body{
     grid-gap: 1rem;
 }
 
+/*----------- BUTTONS ----------*/
 .Button{
+    z-index: 100;
+    top:-0.3rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     font-size: 1.5rem;
-    max-width: 6rem;
+    
     cursor: pointer;
 }
 
@@ -157,7 +169,7 @@ body{
     font-size: 1.1rem;
 }
 
-.ResetButton{
+.ResetButtonShadow{
     grid-column: 1 /span 2;
     text-align: center;
     max-width: none;
@@ -165,8 +177,21 @@ body{
   
 }
 
-.EqualsButton{
+.EqualsButton,
+.ResetButton{
+    width: 100%;
+    max-width: none;
+}
+
+.EqualsButtonShadow{
     grid-column: 3/ span 2 ;
     max-width: none;  
     font-size: 1.1rem;
+}
+
+/*-----------BUTTON SHADOW----------*/
+.ButtonShadow{
+    position: relative;
+    border-radius: 5px;
+    z-index: 5;
 }

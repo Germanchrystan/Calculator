@@ -28,7 +28,7 @@ body{
 
 .Theme__Knob--Slot,
 .Calculator__Pad{
-    background: var(--theme-key-shadow-3);
+    background: var(--theme-toggle-keypad-background);
 }
 
 .Calculator__Screen,
@@ -48,4 +48,17 @@ body{
 
 .EqualsButton{
     background: var(--theme-toggle-key-background-2);
+}
+
+.ButtonShadow{
+    background: var(--theme-key-shadow-3);
+}
+
+.EqualsButtonShadow{
+    background: var(--theme-key-shadow-2)
+}
+
+.DelButtonShadow,
+.ResetButtonShadow{
+    background: var(--theme-key-shadow-1)   
 }

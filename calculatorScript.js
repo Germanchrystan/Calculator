@@ -20,25 +20,36 @@ const buttonsArray = [
     { value:'/', id:'/' },
     { value:'X', id:"*" },
     { value:'RESET', id:'RESET', style: 'ResetButton'},
-    { value: '=', id:"=", style: 'EqualsButton'}
+    { value: '=', id:"EQUALS", style: 'EqualsButton'}
 ]
 
 //========== ADDING BUTTONS TO GRID ==========//
 
 const padGrid = document.querySelector('.Calculator__Pad--Grid');
 
-for(let i = 0; i<buttonsArray.length; i++){
-    let button = document.createElement('div')
+for(let i = 0; i < buttonsArray.length; i++){
+    //Creating Elements
+    let buttonContainer = document.createElement('div');
+    let button = document.createElement('div');
+    let buttonShadow = document.createElement('div');
     
+    //Add classes to Button and Shadow
     button.classList.add(buttonsArray[i].style || 'RegularButton');
-    
+    buttonShadow.classList.add(buttonsArray[i].style ? `${buttonsArray[i].style}Shadow` : `RegularButtonShadow`)
+
+    //Add default classes
     button.classList.add('Button');
-    
+    buttonShadow.classList.add('ButtonShadow');
+
     buttonsArray[i].id ? button.setAttribute("id", buttonsArray[i].id) 
     : button.setAttribute("id", buttonsArray[i].value)
-    
+    //Add Button Text
     button.innerHTML=`<p>${buttonsArray[i].value}</p>`;
-    padGrid.appendChild(button);
+    
+    //Add Shadow to Button
+    buttonShadow.appendChild(button)
+    //Add Button to Grid
+    padGrid.appendChild(buttonShadow);
 }
 //========== CALCULATOR LOGIC ==========//
 
@@ -58,8 +69,8 @@ let operatorsNumber = 0;
 let screenHistory = document.querySelector('.Calculator__Screen--History')
 let screenCurrent = document.querySelector('.Calculator__Screen--Current')
 
-const deleteButton = document.getElementById('DEL') 
-const equalsButton = document.getElementById('=')
+const deleteButton = document.getElementById('DEL'); 
+const equalsButton = document.getElementById('EQUALS');
 const resetButton = document.getElementById('RESET');
 
 const regularButtons = [...document.querySelectorAll('.RegularButton')]
@@ -114,18 +125,26 @@ deleteButton.addEventListener('click', (e) => {
     }
 })
 
-equalsButton.addEventListener('click', (e) => {
-    if (result.length > 0){
-        operation = result;
-        result = '';
-        screenHistory.innerHTML = `<p>${operation}</p>`
-        screenCurrent.innerHTML = `<h1>${result}</h1>`
-    }
-})
 
 resetButton.addEventListener('click', (e) => {
     operation = '';
     result = '';
+    operatorsNumber = 0;
+
     screenHistory.innerHTML = `<p>${operation}</p>`
     screenCurrent.innerHTML = `<h1>${result}</h1>`
+})
+
+equalsButton.addEventListener('click', (e) => {
+    console.log("EQUALS")
+    if (operation.length > 0){
+        if(operatorSimbols.includes(operation[operation.length-1])){
+            operation = operation.concat('0')
+        }
+        result = eval(operation);
+        operation = '';
+        operatorsNumber = 0;
+        screenHistory.innerHTML = `<p>${operation}</p>`
+        screenCurrent.innerHTML = `<h1>${result}</h1>`
+    }
 })

@@ -55,3 +55,16 @@ body{
 .Calculator__Screen--Current{
     color: var(--theme-key-background-3);
 }
+
+.ButtonShadow{
+    background: var(--theme-key-shadow-3);
+}
+
+.EqualsButtonShadow{
+    background: var(--theme-key-shadow-2)
+}
+
+.DelButtonShadow,
+.ResetButtonShadow{
+    background: var(--theme-key-shadow-1)   
+}
