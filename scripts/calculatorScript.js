@@ -90,12 +90,12 @@ regularButtons.map((button) => button.addEventListener('click',
         if(operatorSimbols.includes(id)){
             //Checking user doesnt add two operators in a row
             if(operatorSimbols.includes(operation[operation.length-1])){
-                alert("You cannot add two operators ")
+                //alert("You cannot add two operators ")
                 return
             }
             //You can`t start an operation without a number first
             if(operation.length === 0) {
-                alert("You need to input a number first");
+                //alert("You need to input a number first");
                 return
             }
             //Increments operatorsNumber variable. 
@@ -136,7 +136,7 @@ resetButton.addEventListener('click', (e) => {
 })
 
 equalsButton.addEventListener('click', (e) => {
-    console.log("EQUALS")
+    
     if (operation.length > 0){
         if(operatorSimbols.includes(operation[operation.length-1])){
             operation = operation.concat('0')
