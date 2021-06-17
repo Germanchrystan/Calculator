@@ -86,6 +86,9 @@ regularButtons.map((button) => button.addEventListener('click',
             alert('You reached the limit of digits');
             return; 
         }
+        if(id === "0" && operation===""){
+            return;
+        }
         //Checking if the button is an operator
         if(operatorSimbols.includes(id)){
             //Checking user doesnt add two operators in a row
