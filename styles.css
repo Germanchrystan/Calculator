@@ -199,3 +199,22 @@ body{
     border-radius: 5px;
     z-index: 5;
 }
+
+/*---------- RESPONSIVE FOR HORIZONTAL PHONES ---------*/
+
+@media screen and (max-height: 400px){
+    .attribution{
+        display: none;
+    }
+
+    .Calculator__Screen--Current h1{
+        font-size: 1.7rem;
+    }
+    .Calculator__Pad--Grid{
+        margin:0.9rem;
+    }
+
+    .Button{
+        font-size: 0.8rem;
+    }
+}
